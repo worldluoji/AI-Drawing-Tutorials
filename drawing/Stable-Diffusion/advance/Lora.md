@@ -3,7 +3,7 @@
 
 我们先打开 Civitai 网站，找到网站右上角类似漏斗的符号，它能帮我们选择不同功能或设置。当你点击这个漏斗并选择 LoRA 时，网站界面会提示你选择基础模型（Base model）。因为每个 LoRA 要结合基础模型才能使用。选定基础模型后，网站便会呈现所有适合当前基础模型的 LoRA 模型。
 
-<img src="./images/Civitai.webp" />
+<img src="../images/Civitai.webp" />
 
 当我们遇到一个自己喜欢的 LoRA 模型，需要在 Civitai 的模型信息中找到这个 LoRA 模型对应的基础模型。下载好对应的基础模型，放置在 WebUI 安装位置下面的路径中：stable-diffusion-webui/models/Lora，你便可以获得跟样图十分类似的效果。
 
@@ -28,7 +28,7 @@ negative prompt
 ## 角色风格一致性
 LoRA 不仅可以作为一个风格化模型，还可以实现对特定 ID 的保持，使得角色在不同的场景和情节中保持一致。这样，读者或观众可以轻易地识别和连接这个角色，并与他建立起情感上的联系，让我们的漫画故事更连贯、更容易被记住。
 
-<img src="./images/LoraModelExample.webp" />
+<img src="../images/LoraModelExample.webp" />
 
 以上面的模型为例，简称这个 LoRA模型为 IN。IN 是一个经过训练的 LoRA 模型。通过使用 IN 这个 LoRA模型，我们可以确保角色的 ID 在故事中保持不变。
 
@@ -56,7 +56,7 @@ EasyNegative, (worst quality, low quality:1.4), (lip, nose, rouge, lipstick:1.4)
 
 LoRA 便是利用了矩阵的这个性质。在训练过程中，W 保持固定，优化矩阵 A 和矩阵 B 的权重。这样，W + AB 便是我们最终要用的模型权重。
 
-<img src="./images/LoRA.webp" />
+<img src="../images/LoRA.webp" />
 
 基础模型动辄 3-4GB，而 LoRA 模型最大不过 200M，这是为什么呢？
 我们假定 W 的维度 d=10000，W 的秩 r=100。那么原始权重的参数量便是 100M，而 A 和 B 的参数量只有 1M。这便是 LoRA 模型远远小于基础模型的原因。
