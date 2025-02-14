@@ -6,7 +6,12 @@ Milvus 是一个查询比较高效的向量数据库，开源版支持很好的�
 Milvus 数据库的 Collection 就相当于传统数据库的表，因为 Milvus 数据库是非结构化的，因此可以把产品信息分成若干段结构存入Milvus。
 
 
-示例：
+## install
+https://milvus.io/docs/zh/milvus_lite.md
+
+Milvus Lite 仅适用于小规模向量搜索使用案例。对于大规模用例，建议使用Milvus Standalone 或 Milvus Distributed
+
+## example
 ```python
 import configparser
 import time
