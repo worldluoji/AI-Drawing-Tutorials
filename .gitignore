@@ -3,3 +3,4 @@
 index_tyxs.json
 *.pyc
 *.docx
+milvus_demo.db
